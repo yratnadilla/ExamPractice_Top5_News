@@ -14,27 +14,28 @@ urlHealth = 'https://newsapi.org/v2/top-headlines?country=id&category=health&api
 urlScience = 'https://newsapi.org/v2/top-headlines?country=id&category=science&apiKey=ef3b082b17fe409c94c8189b9758f916'
 
 if choice.isdigit():
-    if int(choice) == 1:
+    choice = int(choice)
+    if choice == 1:
         print('Berikut adalah top 5 berita Indonesia bidang teknologi : ')
         newsTech = requests.get(urlTech)
         for i in range(0, 5):
             print(i + 1, '-', newsTech.json()['articles'][i]['title'])
-    elif int(choice) == 2:
+    elif choice == 2:
         print('Berikut adalah top 5 berita Indonesia bidang bisnis : ')
         newsBusiness = requests.get(urlBusiness)
         for i in range(0, 5):
             print(i + 1, '-', newsBusiness.json()['articles'][i]['title'])
-    elif int(choice) == 3:
+    elif choice == 3:
         print('Berikut adalah top 5 berita Indonesia bidang olahraga : ')
         newsSport = requests.get(urlSport)
         for i in range(0, 5):
             print(i + 1, '-', newsSport.json()['articles'][i]['title'])
-    elif int(choice) == 4:
+    elif choice == 4:
         print('Berikut adalah top 5 berita Indonesia bidang kesehatan : ')
         newsHealth = requests.get(urlHealth)
         for i in range(0, 5):
             print(i + 1, '-', newsHealth.json()['articles'][i]['title'])
-    elif int(choice) == 5:
+    elif choice == 5:
         print('Berikut adalah top 5 berita Indonesia bidang sains : ')
         newsScience = requests.get(urlScience)
         for i in range(0, 5):
